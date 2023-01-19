@@ -1,0 +1,32 @@
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.card {
+    border: 1px solid black;
+    background-color: burlywood;
+    padding: 0.5em;
+}
+
+.card:nth-child(4) {
+    grid-column: 1/ span 2;
+}
+
+.card:hover {
+    animation: hoverCard 1s ease-out 0s 1 forwards;
+}
+
+@keyframes hoverCard {
+    100% {
+        transform: scale(1.2);
+        background-color: lightgreen;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: lightblue;
+}
